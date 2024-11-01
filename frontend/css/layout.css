@@ -1254,8 +1254,8 @@ footer .social-links li:first-child { margin-left: 0; }
    position: absolute;
    top: 50%; /* Wolke vertikal mittig im i-container platzieren */
    left: 50%;
-   transform: translate(-50%, -85%); /* Zentrieren und leicht nach oben verschieben */
-   font-size: 0.4em; /* Wolkengröße */
+   transform: translate(-50%, -82%); /* Zentrieren und leicht nach oben verschieben */
+   font-size: 0.3em; /* Wolkengröße */
    color: #ffffff;
 }
 
@@ -1263,7 +1263,7 @@ footer .social-links li:first-child { margin-left: 0; }
 @media (max-width: 600px) {
    .cloud-icon {
        font-size: 0.3em; /* Wolkengröße leicht anpassen für Mobilgeräte */
-       transform: translate(-50%, -85%); /* Positionierung für kleinere Bildschirme leicht anpassen */
+       transform: translate(-50%, -83%); /* Positionierung für kleinere Bildschirme leicht anpassen */
    }
 }
 
