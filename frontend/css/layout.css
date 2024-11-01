@@ -1230,3 +1230,11 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #0F9095; }
 
+.dot {
+   display: inline-block;
+   width: 5px;
+   height: 5px;
+   background-color: #333;
+   border-radius: 50%; /* Macht den Punkt rund */
+   margin: 0 5px; /* Abstand links und rechts */
+}

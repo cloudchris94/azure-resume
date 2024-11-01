@@ -61,6 +61,7 @@
             <ul class="social">
                <li><a href="https://linkedin.com/in/christoph-schramm-94-msc/"><i class="fa fa-linkedin"></i></a></li>
                <li><a href="https://github.com/cloudchris94/azure-resume"><i class="fa fa-github"></i></a></li>
+               <li><a href="mailto:deinname@beispiel.de"><i class="fa fa-envelope"></i></a></li>
             </ul>
          </div>
       </div>
@@ -105,6 +106,18 @@
     ================================================== -->
 <section id="resume">
 
+    <!-- Allgemeiner Stil für alle Icons in der Resume Section -->
+<style>
+    .resume-icon {
+        color: #00a6ff; /* Einheitliche Farbe für das Icon */
+        margin-left: 5px;
+    }
+    .resume-icon:hover {
+        color: #008cce; /* Dunklere Farbe bei Hover */
+    }
+</style>
+
+
 <!-- Certifications Section -->
 <div class="row section certifications-section">
    <!-- Überschrift über dem Inhalt -->
@@ -112,36 +125,61 @@
        <h1><span>Certifications</span></h1>
    </div>
 
-   <!-- Inhalt darunter -->
-   <div class="main-col">
-       <div class="row item certification-item">
-           <div class="twelve columns">
-               <div class="text-container">
-                   <h3><img src="images/aws.png" alt="AWS Logo" class="cert-logo"> AWS Certified Cloud Practitioner</h3>
-                   <a href="https://www.credly.com/badges/8fabc7c5-3be4-465b-b7d0-29d6a71f3299/linked_in_profile" target="_blank" class="cert-button">View Certificate</a>
-               </div>
-           </div>
-       </div>
+    <!-- Inhalt darunter -->
+    <div class="main-col">
+        <div class="row item certification-item">
+            <div class="twelve columns">
+                <div class="text-container">
+                    <h3>
+                        <img src="images/aws.png" alt="AWS Logo" class="cert-logo"> AWS Certified Cloud Practitioner
+                    </h3>
+                    <a href="https://www.credly.com/badges/8fabc7c5-3be4-465b-b7d0-29d6a71f3299/linked_in_profile" target="_blank">
+                        <i class="fa fa-external-link resume-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- Zertifikat AWS end -->
 
-       <div class="row item certification-item">
-           <div class="twelve columns">
-               <div class="text-container">
-                   <h3><img src="images/oracle.png" alt="Oracle Logo" class="cert-logo"> Oracle Cloud Infrastructure (OCI) 2024 Certified Foundations Associate</h3>
-                   <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CC4C64C6EC45B10B6B132702327CD5B1ED48D2902D8913E57839E8970B6E956F" target="_blank" class="cert-button">View Certificate</a>
-               </div>
-           </div>
-       </div>
+        <div class="row item certification-item">
+            <div class="twelve columns">
+                <div class="text-container">
+                    <h3>
+                        <img src="images/oracle.png" alt="Oracle Logo" class="cert-logo"> Oracle Cloud Infrastructure (OCI) 2024 Certified Foundations Associate
+                    </h3>
+                    <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CC4C64C6EC45B10B6B132702327CD5B1ED48D2902D8913E57839E8970B6E956F" target="_blank">
+                        <i class="fa fa-external-link resume-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- Zertifikat Oracle end -->
 
-       <div class="row item certification-item">
-           <div class="twelve columns">
-               <div class="text-container">
-                   <h3><img src="images/azure_fundamantals.png" alt="Azure Logo" class="cert-logo"> Microsoft Certified: Azure Fundamentals AZ-900</h3>
-                   <a href="https://learn.microsoft.com/en-us/users/schrammchristoph-9886/credentials/c15b5f60dc815fa2?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" class="cert-button">View Certificate</a>
-               </div>
-           </div>
-       </div>
-   </div>
-</div> <!-- Certifications-section end -->
+        <div class="row item certification-item">
+            <div class="twelve columns">
+                <div class="text-container">
+                    <h3>
+                        <img src="images/azure_fundamantals.png" alt="Azure Logo" class="cert-logo"> Microsoft Certified: Azure Fundamentals AZ-900
+                    </h3>
+                    <a href="https://learn.microsoft.com/en-us/users/schrammchristoph-9886/credentials/c15b5f60dc815fa2?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">
+                        <i class="fa fa-external-link resume-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- Zertifikat Azure end -->
+
+        <div class="row item certification-item">
+            <div class="twelve columns">
+                <div class="text-container">
+                    <h3>
+                        <img src="images/google.png" alt="Google Cloud Logo" class="cert-logo"> Google Cloud Digital Leader
+                    </h3>
+                    <a href="https://www.credential.net/5dd7b0b2-9f17-4dbb-874d-3ef9c5b8a5c8" target="_blank">
+                        <i class="fa fa-external-link resume-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- Zertifikat Google Cloud end -->
+    </div> <!-- main-col end -->
+</div> <!-- Certifications Section end -->
   
 <!-- Work Experience Section -->
 <div class="row section work-experience-section">
@@ -155,13 +193,13 @@
        <div class="row item work-item">
            <div class="twelve columns">
                <div class="text-container">
-                   <h3><img src="images/accenture.png" alt="Accenture Logo" class="work-logo"> Accenture GmbH, Berlin</h3>
-                   <p class="info">Cloud Advisory Analyst <span>&bull;</span> <em class="date">July 2024 - Present</em></p>
+                   <h3><img src="images/accenture.png" alt="Accenture Logo" class="work-logo"> Cloud Advisory Analyst <span class="dot"></span> Accenture GmbH</h3>
+                   <p class="info"> <span class="date">July 2024 - Present</em></p>
                    <ul>
-                       <li>Contributed to Europe's largest private cloud migration project for a government entity, ensuring the seamless migration of on-premise IT solutions while maintaining strict compliance with regulatory standards.</li>
-                       <li>Collaborated with stakeholders to analyze over 1,000 IT systems, gather requirements, and define solution architectures that align with both technical and business objectives.</li>
-                       <li>Created architectural diagrams, documentation, and presentations to communicate complex cloud solutions to technical and non-technical audiences.</li>
-                       <li>Business Development: Participated in the development of SOWs (Statements of Work) and presentations to secure new client engagements.</li>
+                       <li>Contributed to one of Europe's largest private cloud migration projects</li>
+                       <li>Stakeholder management, requirements analysis, solution architecture</li>
+                       <li>Creation of architectural diagrams, documentation, and presentations</li>
+                       <li>Business Development activities</li>
                    </ul>
                </div>
            </div>
@@ -170,14 +208,14 @@
        <div class="row item work-item">
            <div class="twelve columns">
                <div class="text-container">
-                   <h3><img src="images/basf.png" alt="BASF Logo" class="work-logo"> BASF Services Europe GmbH, Berlin</h3>
-                   <p class="info">Senior Specialist - Digital Supply Chain Management <span>&bull;</span> <em class="date">August 2023 - June 2024</em></p>
+                   <h3><img src="images/basf.png" alt="BASF Logo" class="work-logo"> Senior Digital Supply Chain Specialist <span class="dot"></span> BASF Services Europe GmbH </h3>
+                   <p class="info"> <span class="date">August 2023 - June 2024</em></p>
                    <ul>
-                       <li>Coordinated multiple projects and drove process enhancements in packaging and labeling operations within one of the world's most innovative supply chains.</li>
-                       <li>Maintained a database for plant protection product information to optimize data integrity for over 300 users.</li>
-                       <li>Provided operational support and guidance to a team of seven packaging and labeling specialists, resulting in improved workflow efficiency and strict adherence to quality standards.</li>
-                       <li>Delivered more than 30 presentations to communicate results to internal stakeholders and senior management.</li>
-                       <li>Coordinated and led a comprehensive onboarding process of five new team members, accelerating their integration and productivity within the team.</li>
+                       <li>Project coordination and process enhancements in packaging and labeling operations</li>
+                       <li>Maintenance of a database for plant protection product information</li>
+                       <li>Operational support and guidance to a team of seven packaging and labeling specialists</li>
+                       <li>Delivery of presentations to stakeholders and senior management</li>
+                       <li>Coordination of onboarding processes</li>
                    </ul>
                </div>
            </div>
@@ -186,14 +224,14 @@
        <div class="row item work-item">
            <div class="twelve columns">
                <div class="text-container">
-                   <h3><img src="images/basf.png" alt="BASF Logo" class="work-logo"> BASF Services Europe GmbH, Berlin</h3>
-                   <p class="info">Label Expert - Digital Supply Chain Management <span>&bull;</span> <em class="date">December 2019 - July 2023</em></p>
+                   <h3><img src="images/basf.png" alt="BASF Logo" class="work-logo"> Digital Supply Chain Expert <span class="dot"></span> BASF Services Europe GmbH </h3>
+                   <p class="info"> <span class="date">December 2019 - July 2023</em></p>
                    <ul>
-                       <li>Developed more than 4,000 product labels for agricultural products while ensuring compliance with regulations (WHO, REACH, CLP) and corporate identity standards.</li>
-                       <li>Managed and updated label and packaging related master data in SAP ZD4 and Z2L for over 10,000 materials.</li>
-                       <li>Collaborated with colleagues from over 60 global BASF sites on labeling and packaging topics, driving consistency and compliance across international operations.</li>
-                       <li>Designed, developed, and maintained a knowledge management system with integrated version control which reduced the occurrence of operational errors within the team by 30%.</li>
-                       <li>Spearheaded the adoption of agile methodologies within a project team using Azure DevOps.</li>
+                       <li>Development of product labels for agricultural products following international regulations (WHO, REACH, CLP)</li>
+                       <li>Master data maintenance in SAP ZD4 and Z2L</li>
+                       <li>Collaboration with colleagues from over 60 global BASF sites</li>
+                       <li>Development and maintenance of a knowledge management system with integrated version control</li>
+                       <li>Spearheaded the adoption of agile methodologies within a project team using Azure DevOps</li>
                    </ul>
                </div>
            </div>
@@ -214,9 +252,9 @@
            <div class="twelve columns">
                <h3>
                    <img src="images/steinbeis.jpg" alt="Steinbeis University Logo" class="education-logo">
-                   Steinbeis University - Schools of Next Practices, Berlin
+                   MSc. Business Management <span class="dot"></span> Steinbeis University Schools of Next Practices
                </h3>
-               <p class="info">MSc. Business Management <span>&bull;</span> <em class="date">September 2021 - August 2024</em></p>
+               <p class="info"> <span class="date">September 2021 - August 2024</em></p>
                <ul>
                    <li>Major: Digital Innovation and Business Transformation</li>
                    <li>Grade: 1.5 (1.0 = best, 5.0 = worst)</li>
@@ -229,9 +267,9 @@
            <div class="twelve columns">
                <h3>
                    <img src="images/ba.jpg" alt="Berufsakademie Sachsen Logo" class="education-logo">
-                   Berufsakademie Sachsen - Staatliche Studienakademie Riesa
+                   B.A. Business Management <span class="dot"></span> Berufsakademie Sachsen
                </h3>
-               <p class="info">B.A. Business Management <span>&bull;</span> <em class="date">August 2014 - September 2017</em></p>
+               <p class="info"> <span class="date">August 2014 - September 2017</em></p>
                <ul>
                    <li>Major: Retail and Wholesale Trade Management</li>
                    <li>Bachelor Thesis: Analysis and Optimization of Warehouse Costs for steel products in a KASTO Storage System.</li>
@@ -307,6 +345,37 @@
    </div> <!-- main-col end -->
 </div> <!-- it-skills-section end -->
 
+<!-- Projects Section -->
+<div class="row section it-skills-section">
+    <!-- Überschrift über dem Inhalt -->
+    <div class="header-col">
+        <h1><span>Projects</span></h1>
+    </div>
+ 
+    <!-- Inhalt darunter -->
+    <div class="main-col">
+        <div class="row item skill-category">
+            <div class="twelve columns">
+                <div class="text-container">
+                    <h3>Cloud Resume Challenge</h3>
+                    <ul>
+                        <li>Technologies used:</li>
+                        <li>Project source code on
+                            <a href="https://github.com/cloudchris94/azure-resume" target="_blank">
+                                GitHub<i class="fa fa-external-link resume-icon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ENTER BLOGPOST ONCE CREATED" target="_blank">
+                                Blog post<i class="fa fa-external-link resume-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- item end -->
+    </div> <!-- main-col end -->
+</div> <!-- Projects Section end -->
    
 </section> <!-- Resume Section End -->
 
@@ -321,6 +390,7 @@
             <ul class="social-links">
                <li><a href="https://linkedin.com/in/christoph-schramm-94-msc/"><i class="fa fa-linkedin"></i></a></li>
                <li><a href="https://github.com/cloudchris94/azure-resume"><i class="fa fa-github"></i></a></li>
+               <li><a href="mailto:deinname@beispiel.de"><i class="fa fa-envelope"></i></a></li>
             </ul>
 
             <ul class="copyright">
