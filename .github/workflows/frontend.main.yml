@@ -1,3 +1,5 @@
+#New code
+
 name: deploy_frontend
 # Deploys when a push is made to the frontend folder
 
@@ -15,6 +17,13 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    # Optional: Cleanup existing blobs in the container
+    - name: Clean up existing blobs
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob delete-batch --account-name azureresumecloudchris --auth-mode key --source '$web'
 
     # Upload files to blob storage with overwrite flag
     - name: Upload to blob storage
