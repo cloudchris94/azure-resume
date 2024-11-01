@@ -1238,3 +1238,22 @@ footer .social-links li:first-child { margin-left: 0; }
    border-radius: 50%; /* Macht den Punkt rund */
    margin: 0 5px; /* Abstand links und rechts */
 }
+
+.name {
+   position: relative;
+   display: inline-block;
+}
+
+.i-container {
+   position: relative;
+   display: inline-block;
+}
+
+.cloud-icon {
+   position: absolute;
+   top: -32px; /* Passe diese Zahl an, um die Wolke genau über das "i" zu setzen */
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 0.3em; /* Größe der Wolke anpassen */
+   color: #ffffff; /* Farbe der Wolke */
+}
