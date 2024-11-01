@@ -1239,6 +1239,7 @@ footer .social-links li:first-child { margin-left: 0; }
    margin: 0 5px; /* Abstand links und rechts */
 }
 
+/* Cloud Icon in Überschrift */
 .name {
    position: relative;
    display: inline-block;
@@ -1251,9 +1252,18 @@ footer .social-links li:first-child { margin-left: 0; }
 
 .cloud-icon {
    position: absolute;
-   top: -32px; /* Passe diese Zahl an, um die Wolke genau über das "i" zu setzen */
+   top: -1.15em; /* Anpassung der vertikalen Position relativ zur Textgröße */
    left: 50%;
    transform: translateX(-50%);
-   font-size: 0.3em; /* Größe der Wolke anpassen */
+   font-size: 0.3em; /* Größe der Wolke relativ zur Schriftgröße */
    color: #ffffff; /* Farbe der Wolke */
 }
+
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 600px) {
+   .cloud-icon {
+       top: -1em; /* Vertikale Position leicht angepasst für mobile Ansicht */
+       font-size: 0.5em; /* Wolke leicht verkleinern auf kleineren Bildschirmen */
+   }
+}
+
