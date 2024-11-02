@@ -291,30 +291,14 @@ ul#nav li.current a { color: #00A4EF; }
    padding: 0;
 }
 
-/* Certifications Section ---------------------------------------------------------------------------------------------*/
-/* Certifications Section - Hauptlayout */
+/* Certifications Section */
 .certifications-section {
    max-width: 800px;
    margin: 0 auto 30px auto;
    padding: 0 15px;
 }
 
-/* Header */
-.certifications-section .header-col {
-   text-align: left;
-   margin-bottom: 10px;
-}
-
-.certifications-section .header-col h1::after {
-   content: '';
-   display: block;
-   width: 100%;
-   height: 1px;
-   background-color: #E8E8E8;
-   margin-top: 10px;
-}
-
-/* Zertifizierungs-Einträge - Standarddarstellung für große Bildschirme */
+/* Zertifizierungs-Einträge für große Bildschirme */
 .certification-item {
    display: flex;
    align-items: center;
@@ -331,27 +315,29 @@ ul#nav li.current a { color: #00A4EF; }
 .text-container h3 {
    font-size: 18px;
    color: #333;
-   display: flex;
-   align-items: center;
+   margin: 0;
+   line-height: 1.5;
 }
 
-/* Responsive Anpassungen für kleine Bildschirme */
+/* Responsive Anpassungen für Bildschirme bis 768px */
 @media (max-width: 768px) {
    .certification-item {
-       flex-direction: column; /* Ordne Logo und Text vertikal an */
+       flex-direction: column;
        align-items: center;
-       text-align: center; /* Zentriere den Text */
+       text-align: center;
    }
 
    .cert-logo {
-       margin-right: 0; /* Entferne das rechte Margin */
-       margin-bottom: 10px; /* Fügt Abstand zwischen Logo und Text hinzu */
+       margin-right: 0;
+       margin-bottom: 10px;
    }
 
    .text-container h3 {
        font-size: 1em;
    }
 }
+
+
 
 
 /* Work Experience Abschnitt --------------------------------------------------------------------------------------------- */
