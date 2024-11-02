@@ -296,6 +296,7 @@ ul#nav li.current a { color: #00A4EF; }
    max-width: 800px;
    margin: 0 auto 30px auto;
    padding: 0 15px;
+   text-align: left; /* Standardmäßig linksbündig für große Bildschirme */
 }
 
 /* Zertifizierungs-Einträge für große Bildschirme */
@@ -321,23 +322,29 @@ ul#nav li.current a { color: #00A4EF; }
 
 /* Responsive Anpassungen für Bildschirme bis 768px */
 @media (max-width: 768px) {
+   /* Zentriert den gesamten Abschnitt auf kleinen Bildschirmen */
+   .certifications-section {
+       text-align: center; /* Zentriert die gesamte Sektion */
+   }
+
+   /* Zertifizierungs-Einträge werden vertikal zentriert dargestellt */
    .certification-item {
        flex-direction: column;
        align-items: center;
        text-align: center;
    }
 
+   /* Entfernt das rechte Margin und fügt Abstand unter dem Logo hinzu */
    .cert-logo {
        margin-right: 0;
        margin-bottom: 10px;
    }
 
+   /* Verkleinert die Schriftgröße der Zertifizierungstitel auf kleinen Bildschirmen */
    .text-container h3 {
        font-size: 1em;
    }
 }
-
-
 
 
 /* Work Experience Abschnitt --------------------------------------------------------------------------------------------- */
