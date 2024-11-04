@@ -109,7 +109,7 @@ header {
 /* Scroll Down Button */
 .scroll-down {
    position: absolute;
-   bottom: -25px;
+   bottom: 50px;
    left: 50%;
    transform: translateX(-50%);
    background-color: white;
