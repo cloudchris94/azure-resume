@@ -179,7 +179,11 @@
 
 });
 
-
+document.querySelector('.scroll-down').addEventListener('click', function(e) {
+   e.preventDefault();
+   const aboutSection = document.querySelector('#about-me');
+   aboutSection.scrollIntoView({ behavior: 'smooth' });
+});
 
 
 

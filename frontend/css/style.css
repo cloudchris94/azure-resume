@@ -1,5 +1,7 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-
+/* CSS Variables */
 :root {
    --primary-color: #0f172a;
    --secondary-color: #334155;
@@ -11,9 +13,11 @@
    --border: #e2e8f0;
    --success: #22c55e;
    --transition: all 0.2s ease;
+   --animation-duration: 0.6s;
+   --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Base Styles */
+/* Reset & Base Styles */
 * {
    margin: 0;
    padding: 0;
@@ -33,12 +37,13 @@ body {
    padding: 0 2rem;
 }
 
-/* Header */
+/* Header Styles */
 header {
    background-color: var(--primary-color);
    padding: 6rem 0 4rem;
    margin-bottom: 2rem;
    color: white;
+   position: relative;
 }
 
 .profile-section {
@@ -66,12 +71,14 @@ header {
 }
 
 .name {
-   font-size: 3.5rem;
+   font-family: 'Inter', sans-serif;
+   font-size: 5.25rem;
    font-weight: 700;
    color: white;
    letter-spacing: -0.5px;
    position: relative;
    display: inline-block;
+   margin-bottom: 0.5rem;
 }
 
 .name .cloud-i {
@@ -83,31 +90,51 @@ header {
    content: '\f0c2';
    font-family: 'FontAwesome';
    position: absolute;
-   font-size: 0.3em; /* Using em instead of rem for proportional scaling */
-   top: 0.85em; /* Using em for relative positioning */
+   font-size: 0.3em;
+   top: 0.85em;
    left: 50%;
    transform: translateX(-50%);
    color: white;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-   .name {
-       font-size: 2rem;
-   }
-   
-   .name .cloud-i::before {
-       top: 0.75em; /* Adjust position for smaller screens */
-   }
-}
-
-.job-title {
-   font-size: 1.25rem;
-   font-weight: 400;
+.resume-title {
+   font-size: 1.5rem;
+   font-weight: 500;
    color: rgba(255, 255, 255, 0.9);
+   text-transform: uppercase;
+   letter-spacing: 0.25em;
+   margin-bottom: 1.5rem;
 }
 
-/* Links */
+/* Scroll Down Button */
+.scroll-down {
+   position: absolute;
+   bottom: -25px;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: white;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+   z-index: 10;
+}
+
+.scroll-down i {
+   color: var(--primary-color);
+   font-size: 1.5rem;
+}
+
+.scroll-down:hover {
+   transform: translateX(-50%) translateY(-5px);
+}
+
+/* Links & Social Icons */
 .text-link {
    color: var(--accent-color);
    text-decoration: none;
@@ -120,7 +147,6 @@ header {
    border-bottom-color: var(--accent-color);
 }
 
-/* Social Icons */
 .social-icons {
    display: flex;
    gap: 1.5rem;
@@ -147,9 +173,18 @@ header {
    font-size: 2em;
 }
 
-/* Sections */
+/* Section Styles */
 .section {
    padding: 3rem 0;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity var(--animation-duration) var(--animation-timing),
+               transform var(--animation-duration) var(--animation-timing);
+}
+
+.section.visible {
+   opacity: 1;
+   transform: translateY(0);
 }
 
 .section p {
@@ -161,6 +196,7 @@ header {
 }
 
 h2 {
+   font-family: 'Inter', sans-serif;
    font-size: 1.5rem;
    font-weight: 600;
    color: var(--primary-color);
@@ -183,6 +219,15 @@ h2 {
    transition: var(--transition);
    text-decoration: none;
    color: inherit;
+   opacity: 0;
+   transform: translateY(10px);
+}
+
+.section.visible .cert-item {
+   opacity: 1;
+   transform: translateY(0);
+   transition: opacity 0.4s var(--animation-timing),
+               transform 0.4s var(--animation-timing);
 }
 
 .cert-icon {
@@ -205,6 +250,15 @@ h2 {
 /* Work Experience */
 .work-item {
    margin-bottom: 3rem;
+   opacity: 0;
+   transform: translateY(10px);
+}
+
+.section.visible .work-item {
+   opacity: 1;
+   transform: translateY(0);
+   transition: opacity 0.4s var(--animation-timing),
+               transform 0.4s var(--animation-timing);
 }
 
 .work-item:last-child {
@@ -212,6 +266,7 @@ h2 {
 }
 
 .work-title {
+   font-family: 'Inter', sans-serif;
    font-size: 1.125rem;
    font-weight: 600;
    color: var(--primary-color);
@@ -231,7 +286,7 @@ h2 {
 /* Skills Grid */
 .skills-grid {
    display: grid;
-   grid-template-columns: repeat(2, 1fr); /* Changed to always show 2 columns */
+   grid-template-columns: repeat(2, 1fr);
    gap: 2rem;
 }
 
@@ -240,7 +295,21 @@ h2 {
    padding: 1.5rem;
    border-radius: 8px;
    transition: var(--transition);
+   opacity: 0;
+   transform: translateY(10px);
 }
+
+.section.visible .skill-category {
+   opacity: 1;
+   transform: translateY(0);
+   transition: opacity 0.4s var(--animation-timing),
+               transform 0.4s var(--animation-timing);
+}
+
+.skill-category:nth-child(1) { transition-delay: 0.1s; }
+.skill-category:nth-child(2) { transition-delay: 0.2s; }
+.skill-category:nth-child(3) { transition-delay: 0.3s; }
+.skill-category:nth-child(4) { transition-delay: 0.4s; }
 
 .skill-category:hover {
    transform: translateY(-2px);
@@ -248,6 +317,7 @@ h2 {
 }
 
 .skill-category h3 {
+   font-family: 'Inter', sans-serif;
    font-size: 1rem;
    font-weight: 600;
    color: var(--primary-color);
@@ -299,7 +369,6 @@ footer {
    margin-right: -50vw;
 }
 
-/* Adjust footer icons spacing */
 .footer-icons {
    max-width: 1000px;
    margin: 1rem auto 0;
@@ -330,9 +399,10 @@ footer {
    transform: translateY(-2px);
 }
 
+/* Back to Top Button */
 .back-to-top {
-   background-color: rgba(15, 23, 42, 0.9); /* Using your primary color with opacity */
-   border: 1px solid rgba(255, 255, 255, 0.1);
+   background-color: var(--accent-color);
+   border: none;
    border-radius: 50%;
    width: 48px;
    height: 48px;
@@ -340,35 +410,26 @@ footer {
    align-items: center;
    justify-content: center;
    cursor: pointer;
-   transition: var(--transition);
    color: white;
    position: absolute;
    left: 50%;
    transform: translate(-50%, -50%);
    top: 0;
    text-decoration: none;
+   transition: all 0.3s ease;
+   z-index: 1000;
+   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
 }
 
 .back-to-top:hover {
-   background-color: var(--primary-color);
-   transform: translate(-50%, -50%) translateY(-2px);
-   border-color: rgba(255, 255, 255, 0.2);
+   background-color: #2563eb;
+   transform: translate(-50%, -60%);
 }
 
-/* Animations */
-@keyframes fadeIn {
-   from {
-       opacity: 0;
-       transform: translateY(10px);
-   }
-   to {
-       opacity: 1;
-       transform: translateY(0);
-   }
-}
-
-.section {
-   animation: fadeIn 0.5s ease-out forwards;
+/* Selection Style */
+::selection {
+   background: var(--accent-color);
+   color: white;
 }
 
 /* Responsive Design */
@@ -382,17 +443,21 @@ footer {
    }
 
    .section {
-      padding: 2rem 0; /* Reduced from 3rem to 2rem for mobile */
-  }
+      padding: 2rem 0;
+   }
 
    .name {
-       font-size: 2rem;
+      font-size: 3rem;
+   }
+
+   .name .cloud-i::before {
+      top: 0.75em;
    }
 
    .skills-grid {
-      grid-template-columns: 1fr; /* Single column on mobile */
+      grid-template-columns: 1fr;
       gap: 1rem;
-  }
+   }
 
    .cert-item {
        padding: 1rem;
@@ -401,6 +466,10 @@ footer {
    .footer-icons {
        padding: 0 1.5rem;
        gap: 2rem;
+   }
+   
+   .resume-title {
+      font-size: 1.25rem;
    }
 }
 
@@ -432,10 +501,4 @@ footer {
    .skill-category {
        break-inside: avoid;
    }
-}
-
-/* Selection Style */
-::selection {
-   background: var(--accent-color);
-   color: white;
 }

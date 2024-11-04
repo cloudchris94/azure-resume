@@ -7,29 +7,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+       <!-- Script
+   ================================================== -->
+   <script src="js/modernizr.js"></script>
+   <script src="main.js"></script>
+
 </head>
 <body>
     <header>
         <div class="profile-section">
             <img src="images/me.jpg" alt="Profile Photo" class="profile-img">
             <h1 class="name">Chr<span class="cloud-i">i</span>stoph Schramm</h1>
-                <div class="social-icons">
+            <div class="resume-title">Resume</div>
+            <div class="social-icons">
                 <a href="https://www.linkedin.com/in/christoph-schramm-94-msc/" aria-label="LinkedIn Profile" target="_blank">
                     <i class="fa fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/cloudchris94" aria-label="GitHub Profile" target="_blank">
                     <i class="fa fa-github"></i>
                 </a>
-                <a href="christophschramm94@gmx.de" aria-label="Email Contact">
+                <a href="mailto:christophschramm94@gmx.de" aria-label="Email Contact">
                     <i class="fa fa-envelope"></i>
                 </a>
             </div>
+            <a href="#about-me" class="scroll-down">
+                <i class="fa fa-angle-down"></i>
+            </a>
         </div>
     </header>
-
+    
     <div class="container">
-        <section class="section">
-            <h2></i> About Me</h2>
+        <section class="section" id="about-me">
+            <h2>About Me</h2>    
             <p>I'm a Berlin based Cloud Advisory Analyst at <a href="https://www.accenture.com" class="text-link" target="_blank" rel="noopener noreferrer">Accenture</a> and continuous learning enthusiast.</p>
             <p>With a foundation in digital innovation, business transformation, emerging technologies, change management, business practices, and cloud solutions, I empower clients with a holistic and pragmatic consulting approach.</p>
             <p>This page is entirely hosted on the Azure Cloud and was built as part of the <a href="https://cloudresumechallenge.dev/" class="text-link" target="_blank">Cloud Resume Challenge</a>. Through this project, I aim to deepen my expertise in cloud technologies and demonstrate my commitment to continuous growth and technical proficiency.</p>
@@ -37,15 +51,15 @@
 
         <section class="section">
                         <h2>Certifications</h2>
-                        <a href="https://www.credly.com/badges/your-aws-badge-id" class="cert-item" target="_blank">
+                        <a href="https://www.credly.com/badges/8fabc7c5-3be4-465b-b7d0-29d6a71f3299/linked_in_profile" class="cert-item" target="_blank">
                             <img src="images/aws.png" alt="AWS Certification" class="cert-icon">
                             <div class="cert-content">AWS Certified Cloud Practitioner</div>
                         </a>
-                        <a href="https://catalog-education.oracle.com/your-oci-cert" class="cert-item" target="_blank">
+                        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CC4C64C6EC45B10B6B132702327CD5B1ED48D2902D8913E57839E8970B6E956F" class="cert-item" target="_blank">
                             <img src="images/oracle.png" alt="OCI Certification" class="cert-icon">
                             <div class="cert-content">OCI 2024 Certified Foundations Associate</div>
                         </a>
-                        <a href="https://learn.microsoft.com/your-azure-cert" class="cert-item" target="_blank">
+                        <a href="https://learn.microsoft.com/en-us/users/schrammchristoph-9886/credentials/c15b5f60dc815fa2?ref=https%3A%2F%2Fwww.linkedin.com%2F" class="cert-item" target="_blank">
                             <img src="images/azure_fundamantals.png" alt="Azure Certification" class="cert-icon">
                             <div class="cert-content">Microsoft Certified: Azure Fundamentals (AZ-900)</div>
                         </a>
@@ -189,11 +203,23 @@
                 <a href="https://github.com/cloudchris94" aria-label="GitHub Profile" target="_blank">
                     <i class="fa fa-github"></i>
                 </a>
-                <a href="christophschramm94@gmx.de" aria-label="Email Contact">
+                <a href="mailto:christophschramm94@gmx.de" aria-label="Email Contact">
                     <i class="fa fa-envelope"></i>
                 </a>
             </div>
         </footer>
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
 
 </body>
 </html>
