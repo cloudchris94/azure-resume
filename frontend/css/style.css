@@ -1,5 +1,14 @@
 /* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@font-face {
+   font-family: 'Graphik';
+   src: url('font/GraphikThin.woff2') format('woff2'),
+        url('font/GraphikThin.woff') format('woff'),
+        url('font/GraphikThin.ttf') format('truetype');
+   font-weight: 100;  /* Changed to 100 for Thin weight */
+   font-style: normal;
+   font-display: swap;
+}
 
 /* CSS Variables */
 :root {
@@ -59,51 +68,63 @@ header {
    height: 180px;
    border-radius: 50%;
    object-fit: cover;
-   border: 2px solid rgba(255, 255, 255, 0.2);
+   border: 3px solid rgba(255, 255, 255, 0.15);
    padding: 4px;
-   background-color: rgba(255, 255, 255, 0.1);
+   background-color: rgba(255, 255, 255, 0.08);
    transition: var(--transition);
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .profile-img:hover {
    transform: scale(1.02);
-   border-color: rgba(255, 255, 255, 0.4);
+   border-color: rgba(255, 255, 255, 0.3);
 }
 
 .name {
    font-family: 'Inter', sans-serif;
-   font-size: 5.25rem;
+   font-size: 4rem;
    font-weight: 700;
    color: white;
-   letter-spacing: -0.5px;
+   letter-spacing: 0.2em;
    position: relative;
    display: inline-block;
    margin-bottom: 0.5rem;
-}
-
-.name .cloud-i {
-   position: relative;
-   display: inline-block;
-}
-
-.name .cloud-i::before {
-   content: '\f0c2';
-   font-family: 'FontAwesome';
-   position: absolute;
-   font-size: 0.3em;
-   top: 0.85em;
-   left: 50%;
-   transform: translateX(-50%);
-   color: white;
+   text-transform: uppercase;
+   background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.85) 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .resume-title {
-   font-size: 1.5rem;
+   font-family: 'Inter', sans-serif;
+   font-size: 1.25rem;
    font-weight: 500;
    color: rgba(255, 255, 255, 0.9);
    text-transform: uppercase;
-   letter-spacing: 0.25em;
+   letter-spacing: 0.2em;
    margin-bottom: 1.5rem;
+   position: relative;
+   display: inline-block;
+   padding: 0 1.5rem;
+}
+
+.resume-title::before,
+.resume-title::after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   height: 1px;
+   background-color: rgba(255, 255, 255, 0.2);
+   width: 60px;
+}
+
+.resume-title::before {
+   right: 100%;
+}
+
+.resume-title::after {
+   left: 100%;
 }
 
 /* Scroll Down Button */
@@ -447,7 +468,7 @@ footer {
    }
 
    .name {
-      font-size: 2rem;
+      font-size: 2.5rem;
    }
 
    .name .cloud-i::before {
@@ -469,7 +490,13 @@ footer {
    }
    
    .resume-title {
-      font-size: 1.25rem;
+      font-size: 1rem;
+      padding: 0 1rem;
+   }
+   
+   .resume-title::before,
+   .resume-title::after {
+      width: 40px;
    }
 }
 
